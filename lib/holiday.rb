@@ -57,7 +57,7 @@ def all_holidays_with_bbq(holiday_hash)
     puts "#{holiday.to_s.split('_').map.join(' ')"" if supplies.include? ("BBQ")
     
    end
- end
+ 
   end
   
 end
