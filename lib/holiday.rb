@@ -50,20 +50,13 @@ def all_supplies_in_holidays(holiday_hash)
  #expect(all_holidays_with_bbq(holiday_supplies)).to eq([:fourth_of_july, :memorial_day])
 
 def all_holidays_with_bbq(holiday_hash)
-  # return an array of holiday names (as symbols) where supply lists
-  # include the string "BBQ"
-  holiday_hash.collect do |season,holidays|
-    holidays.collect do |holiday,supplies|
-      
-      if supplies.include? ("BBQ") && supplies != nil
-     holiday
-     
+  new_array = []
+  holiday_hash.keys.each do |season| # iterate over the keys(seasons) in your holiday_hash.
+    holiday_hash[season].each do |key, value| # iterate over inner hash where season is the key.            
+      new_array << key if value.include? 'BBQ'
+    end
   end
-  
-   end
- 
-  end
-  
+  new_array
 end
 
 #expected: [:fourth_of_july, :memorial_day]
