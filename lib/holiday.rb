@@ -55,10 +55,9 @@ def all_holidays_with_bbq(holiday_hash)
   holiday_hash.collect do |season,holidays|
     holidays.collect do |holiday,supplies|
       if supplies.include? ("BBQ")
-    
-     holiday
+     holiday.delete_if { |k,v| v.nil? } 
+     
   end
-   holiday.delete_if { |k,v| v.nil? } 
    end
  
   end
