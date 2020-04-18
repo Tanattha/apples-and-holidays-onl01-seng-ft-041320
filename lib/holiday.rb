@@ -51,16 +51,13 @@ def all_supplies_in_holidays(holiday_hash)
 
 def all_holidays_with_bbq(holiday_hash)
   new_array = []
-  holiday_hash.keys.each do |season| # iterate over the keys(seasons) in your holiday_hash.
-    holiday_hash[season].each do |key, value| # iterate over inner hash where season is the key.            
+  holiday_hash.keys.each do |season| 
+    holiday_hash[season].each do |key, value|          
       new_array << key if value.include? 'BBQ'
     end
   end
   new_array
 end
-
-#expected: [:fourth_of_july, :memorial_day]
-#got: [[nil, nil], [:fourth_of_july], [nil], [:memorial_day]]
 
 =begin
 def all_holidays_with_bbq(holiday_hash)
