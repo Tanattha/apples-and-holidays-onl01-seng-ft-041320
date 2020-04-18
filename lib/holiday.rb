@@ -47,7 +47,7 @@ def all_supplies_in_holidays(holiday_hash)
    end
   end
  end
-
+ #expect(all_holidays_with_bbq(holiday_supplies)).to eq([:fourth_of_july, :memorial_day])
 
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
