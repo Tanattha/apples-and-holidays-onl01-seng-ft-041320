@@ -57,7 +57,8 @@ def all_holidays_with_bbq(holiday_hash)
     holiday if supplies.include? ("BBQ")
    end
    
-  end.flatten.compact
+  end
+  holiday.flatten.compact
 end
 
 #expected: [:fourth_of_july, :memorial_day]
